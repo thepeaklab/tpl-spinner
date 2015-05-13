@@ -1,60 +1,33 @@
-# angular-custom-select
+# tpl-spinner
 
-Thie is just another kind of customizable select directive but unlike other there's no need to create a predefined template.
-
-Just add some attributes to your select-field and it's done.
+A AngularJS directive for showing a spinner-element while loading data.
 
 #### Installation ##
 ```
-$ bower install https://github.com/grumpyshoe/angular-custom-select.git --save
+$ bower http://thomas@stash.thepeaklab.biz:7990/scm/open/tpl-spinner.git--save
 ```
 
 #### How to use ##
-There are two directives you could use __tpl-select__ and __tpl-select-static__.
-
-#### tpl-select ##
-This directive should be used by setting the options dynamically via $scope parameter.
-
-Syntax:
 ```
-<div tpl-select tpl-options="myOptions" tpl-label="myLabelKey" ng-model="myModel"></div>
+<spinner></spinner>
+or
+<spinner trigger="userdetails" show-initial="true"></spinner>
 ```
-The property ___tpl-label___ shouldn't be set if only a String-Array is used as source.
-
-Attributes:
-* __ng-model__: the model where the data should be saved
-* __tpl-select__: defines that this get option via $scope parameter
-* __tpl-options__: array of options shown on select
-* __tpl-label__: the object key that represents the label that data (optional)
-* __tpl-prefix__: prefix to be set before label (optional)
-* __tpl-identifier__: unique identifier used for cache selected data (optional)
-* __tpl-setfirstvaluemanually__: defines if selected value should automatically be first of _tpl-options_
-
-#### tpl-select-static ##
-This directive should be used by setting the options static in _option_-tags.
-
-Syntax:
-```
-<div tpl-select-static ng-model="myModel">
-  <option value="key1">label1</option>
-  <option value="key2">label2</option>
-</div>
-```
-
-Attributes:
- * __tpl-select-static__: defines that this should use defined option tags
- * __ng-model__: the model where the data should be saved
-* __tpl-prefix__: prefix to be set before label (optional)
-* __tpl-identifier__: unique identifier used for cache selected data (optional)
-
-### Result (the same as in _tpl-select_):
+#### Attributes ##
+* __trigger__ : [string] trigger for showign this loading spinner
+* __show-initial__: [boolean] flag to define if loading spinner should be shown initially
  ```
-<div class="tpl-select">
-  <div class="tpl-select__trigger">{{ngModel[tplLabel] | translate}}</div>
-  <ul class="tpl-select__list">
-    <li  class="tpl-select__list-item" ng-repeat="option in tplOptions" ng-Click="select(option)">
-    {{option[tplLabel] | translate}}
-    </li>
-  </ul>
-</div>
+
+#### Note ##
+   Trigger a spinner to be __shown__ will be done by calling:
+```
+$rootScope.$emit('<triggername>.show');
+
+e.g. $rootScope.$emit('userdetails.show');
+```
+A Spinner can be __hidden__ by calling:
+```
+$rootScope.$emit('<triggername>.hide');
+
+e.g. $rootScope.$emit('userdetails.hide');
 ```
