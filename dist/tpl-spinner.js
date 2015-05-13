@@ -31,7 +31,7 @@
    * @author David Reiher
    * @author Thomas Cirksena
    */
-  angular.module('tpl-spinner', ['tpl.scope-listener-manager']).directive('tpl-spinner', [
+  angular.module('tpl-spinner', ['tpl.scope-listener-manager']).directive('tplspinner', [
     '$http',
     '$timeout',
     '$rootScope',

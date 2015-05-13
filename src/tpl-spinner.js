@@ -34,7 +34,7 @@
    */
   angular.module('tpl-spinner', ['tpl.scope-listener-manager'])
 
-  .directive('tpl-spinner', [
+  .directive('tplspinner', [
     '$http',
     '$timeout',
     '$rootScope',
