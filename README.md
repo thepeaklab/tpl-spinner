@@ -4,7 +4,7 @@ A AngularJS directive for showing a spinner-element while loading data.
 
 #### Installation ##
 ```
-$ bower http://thomas@stash.thepeaklab.biz:7990/scm/open/tpl-spinner.git--save
+$ bower install http://thomas@stash.thepeaklab.biz:7990/scm/open/tpl-spinner.git --save
 ```
 
 #### How to use ##
