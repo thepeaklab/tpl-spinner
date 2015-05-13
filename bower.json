@@ -1,6 +1,6 @@
 {
   "name": "tpl-spinner",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "main": [
     "dist/tpl-spinner.js",
     "dist/tpl-spinner.css"
