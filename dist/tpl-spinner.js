@@ -13,10 +13,10 @@
    * show-initial [boolean] flag to defien if loading spinner should be shown initially
    *
    * @example creates a spinner that is shown if any http-request is called:
-   *  <spinner></spinner>
+   *  <tplspinner></tplspinner>
    *
    * @example creates a spinner displayed on trigger 'userdetails.show', hidden on trigger 'userdetails.hide':
-   *  <spinner trigger="userdetails" show-initial="true"></spinner>
+   *  <tplspinner trigger="userdetails" show-initial="true"></tplspinner>
    *
    *
    *  Note:

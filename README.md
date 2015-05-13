@@ -8,10 +8,16 @@ $ bower install http://thomas@stash.thepeaklab.biz:7990/scm/open/tpl-spinner.git
 ```
 
 #### How to use ##
+
+##### 1. Include module
+Inclucde the module 'tpl-spinner' into your app-module.
+
+##### 2. set directive in html
+
 ```
-<spinner></spinner>
+<tplspinner></tplspinner>
 or
-<spinner trigger="userdetails" show-initial="true"></spinner>
+<tplspinner trigger="userdetails" show-initial="true"></tplspinner>
 ```
 #### Attributes ##
 * __trigger__ : [string] trigger for showign this loading spinner
